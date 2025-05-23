@@ -41,6 +41,7 @@ public class ClientController implements Initializable {
         new Thread(() -> {
             try {
                 socket = new Socket("localhost",3001);
+
                 dis = new DataInputStream(socket.getInputStream());
                 dos = new DataOutputStream(socket.getOutputStream());
                 System.out.println("Client Connected");
@@ -106,6 +107,7 @@ public class ClientController implements Initializable {
         hBox.setAlignment(Pos.CENTER_RIGHT);
         hBox.setPadding(new Insets(5,5,5,5));
         hBox.getChildren().add(textFlow);
+
         Platform.runLater(() -> {
             msgContainVBOX.getChildren().add(hBox);
         });

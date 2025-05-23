@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Server {
-    private static ServerSocket serverSocket;
+    public static ServerSocket serverSocket;
     private static Socket socket;
     private static Server server;
     private List<Client> clients = new ArrayList<>();
